@@ -39,7 +39,6 @@ app.post('/api/shorturl', function(req, res) {
     } else {
       uniqueId = nextId++;
       db[uniqueId] = url;
-      console.log(db);
       res.json({ "original_url": url, "short_url": uniqueId});
     }
   });
